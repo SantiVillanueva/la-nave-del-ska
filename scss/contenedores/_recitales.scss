@@ -1,0 +1,62 @@
+/*recitales*/
+//importar archivos secundarios
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+main{
+    h1{
+        @include titulo__movil;
+    }
+    .recitales{
+        @include flex;
+        font-size: 15px;       
+        .recitales__lista{
+            background-color: $color__contenedor;
+            @include box__shadow;
+            tr{
+                .recitales__lugar{
+                    text-align:left;
+                    padding: 0.5rem;
+                }
+                .recitales__fecha{
+                    text-align: right;
+                    padding: 0.5rem;           
+            }
+            }
+        }
+    }
+}
+
+/*media queris tablet*/
+@media screen and ($tablet) {
+    main{
+        h1{
+            @include titulo__tablet;
+        }
+    }
+    
+}
+
+/*media queris pc*/
+@media screen and ($pc){
+    main{
+        h1{
+            @include titulo;
+        }
+        .recitales{
+            font-size: 20px;            
+            .recitales__lista{
+                width: 25%;                
+                tr{ 
+                    .recitales__lugar{ 
+                        margin-left: 2rem;
+                    }
+                    .recitales__fecha{
+                        margin-right: 2rem;
+                    } 
+                }   
+            }
+
+        }
+    }
+}

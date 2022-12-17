@@ -1,0 +1,73 @@
+
+//importar archivos secundarios
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+@import "../utilidades/extend";
+
+/*nosotros*/
+main{
+    h1{
+        @include titulo__movil;
+    }
+    .nosotros{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+         
+        .nosotros__contenedor{
+           @include flex;        
+           @extend %estilonosotros;
+           width: 100%;
+         
+           .nosotros__imagen{
+                display: flex;
+                width: 100%;
+                
+            }
+        }
+        .nosotros__parrafo{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin: 0 .5rem 0 .5rem;
+            @extend %estilonosotros;
+            padding: 0.5rem;           
+        }
+    }
+}
+
+/*media queris tablet*/
+@media screen and ($tablet) {
+    main{
+        h1{
+            @include titulo__tablet;
+        }
+    }
+    
+}
+
+
+/*media queris pc*/
+@media screen and ($pc){
+main{
+    h1{
+        @include titulo;
+    }
+    .nosotros{
+        .nosotros__contenedor{
+            width: 75%;
+            .nosotros__imagen{
+                width: 100%;
+            }
+           
+        }
+        .nosotros__parrafo{
+            width: 75%; 
+            font-size: 20px;
+           padding: 2rem;
+        }
+        
+    }
+}
+}

@@ -1,0 +1,40 @@
+
+@mixin box__shadow{
+    box-shadow: 7px 13px 37px rgb(43, 42, 42);      
+    border: 1px solid black;    
+}
+
+@mixin  flex {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;  
+    padding: 1rem; 
+}
+
+@mixin titulo {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: $color__titulo;
+    margin: 2rem 0 2rem 0;    
+}
+@mixin titulo__tablet {
+    font-size: 30px;
+    text-align: center;
+    color: $color__titulo;
+    margin: 1rem 0 1rem 0;  
+    
+}
+@mixin titulo__movil {
+    font-size: 25px;
+    text-align: center;
+    color: $color__titulo;
+    margin: 1rem 0 1rem 0;  
+    
+}
+@mixin boton {
+    font-weight: bold;
+    padding: 0 1rem 0 1rem;
+    box-shadow: 1px 1px 5px black;                           
+    border-radius: 35px;                            
+}

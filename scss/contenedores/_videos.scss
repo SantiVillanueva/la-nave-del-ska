@@ -1,0 +1,124 @@
+//archivos secundarios
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/*videos*/
+main{
+    padding-bottom: 1rem;
+    h1{
+        @include titulo__movil;
+    }
+    .contenedor-videos{
+        display: none;
+    }
+    .carousel{
+        .container{
+            div{
+                div{
+                    div{
+                        div{
+                            .d-block{
+                                display: flex;
+                                height: 315px;  
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*media queris tablet*/
+@media screen and ($tablet){
+    main{
+        h1{
+            @include titulo__tablet;
+        }
+        padding-bottom: 1rem;
+        .contenedor-videos{
+            display: none;
+        }
+        .carousel{
+            .container{
+                div{
+                    div{
+                        div{
+                            div{
+                                .d-block{
+                                    display: flex;
+                                    height: 480px;  
+        
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*media queris pc*/
+@media screen and ($pc){ 
+   
+    main{
+        padding-bottom: 3rem;
+        h1{
+            @include titulo;
+        }
+        .carousel{
+            display: none;
+        }
+        .contenedor-videos {  
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-auto-flow: column;
+            grid-template-areas:
+              "Video-1 Video-2" 
+              "Video-3 Video-4"
+              "Video-5 Video-6";
+            .Video-1 { 
+                grid-area: Video-1;
+                display: flex;
+                align-items: center;
+                justify-content: center;   
+            }       
+            .Video-2 { 
+                grid-area: Video-2;  
+                display: flex;
+                align-items: center;
+                justify-content: center;            
+            }      
+            .Video-3 { 
+                grid-area: Video-3; 
+                display: flex;
+                align-items: center;
+                justify-content: center;     
+            }      
+            .Video-4 {
+                 grid-area: Video-4;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;   
+            }     
+            .Video-5 { 
+                grid-area: Video-5;
+                display: flex;
+                align-items: center;
+                justify-content: center;   
+            }      
+            .Video-6 { 
+                grid-area: Video-6;
+                display: flex;
+                align-items: center;
+                justify-content: center;   
+            }
+    }
+} 
+}

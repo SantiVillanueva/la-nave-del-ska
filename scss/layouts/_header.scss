@@ -1,0 +1,83 @@
+@import "../utilidades/mixin";
+/*menu*/
+
+header{  
+    background-color: $color__menu;
+    font-size: 20px;
+    font-weight: bold;
+    
+    nav{
+        div{              
+            .titulo{
+                font-size: 25px;              
+                .logo{  
+                    width: 10%;
+                }
+            }          
+            #navbarSupportedContent{
+                justify-content: right ;
+            }
+            div{                
+                ul{
+                    gap: 1rem; 
+                    li{    
+                        padding: 0 0.45rem 0 0.45rem;
+                        box-shadow: 0 1px 5px black;                          
+                        border-radius: 30px;  
+                        border: 0 solid black;
+                        background-color: rgba($color: #ffffff, $alpha: 0.05);  
+                        transition: 0.5s;
+                        z-index: 0;
+                        position: relative;
+                        overflow: hidden;
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and ($pc){
+    header{
+        nav{
+            div{
+                .titulo{
+                    margin-right: 0.5rem;
+                    
+                    .logo{
+                        margin-left: 0.5rem;   
+                        width: 12%;
+                    }
+                }
+                div{
+                    ul{
+                        li{
+                            &::after{
+                                content: "";
+                                
+                                width: 1px;
+                                height: 1px;
+                                background: none;
+                                position: absolute;
+                                z-index: -1;
+                                top: 50%;
+                                left: 50%;
+                                transition: .5s ease-in-out all;
+                                border-radius: 100px;
+                                transform-origin: center;
+                                text-transform: uppercase;
+                            }
+                            &:hover:after{
+                                transform: scale(200);
+                                background: #3cc573;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

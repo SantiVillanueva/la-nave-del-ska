@@ -1,0 +1,95 @@
+/*contacto*/
+//importar archivos secundarios
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+main{
+    .contacto__contenedor{
+        @include flex;
+        padding-top: 2rem;          
+        .contacto__formulario{
+            display: flex;
+            justify-content: center;
+            background-color: $color__contenedor;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 1rem;
+            @include box__shadow;
+            form{
+                fieldset{
+                    .contacto__legend{
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                    div{
+                        .contacto__input{
+                            width: 100%;
+                            border: none;    
+                        }
+                    }    
+                    .contacto__obligatorio{
+                        font-size: 12px;
+                    }               
+                    div{
+                        .contacto__boton{
+                            background-color: $color__boton;
+                            color: $color__contenedor;
+                            font-size: 16px;
+                            @include boton;
+                            border: 1px groove black;
+                        }
+                        .contacto__boton:hover{
+                            transform: scale(0.96);
+                            color:#e2e2e2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*media queris tablet*/
+@media screen and ($tablet) {
+    main{
+        .contacto__contenedor{
+            .contacto__formulario{
+                font-size: 22px;
+                form{
+                    fieldset{
+                        .contacto__legend{
+                            font-size: 25px;
+                        }
+                        div{
+                            .contacto__boton{
+                                font-size: 18x;
+                                
+                            }              
+                        }
+                    }
+                } 
+            }
+        }
+    } 
+}     
+
+
+/*media queris pc*/
+@media screen and ($pc) {
+    main{
+        .contacto__contenedor{
+            .contacto__formulario{
+                font-size: 25px;
+                form{
+                    fieldset{                           
+                        div{
+                            .contacto__boton{
+                                font-size: 20x;
+                                
+                            }              
+                        }
+                    }
+                } 
+            }
+        }
+    } 
+}     
